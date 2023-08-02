@@ -4,7 +4,6 @@ import com.gabriel.rest.webservices.restfulwebservices.Model.Request.UserRequest
 import com.gabriel.rest.webservices.restfulwebservices.Model.Response.UserResponseDto;
 import com.gabriel.rest.webservices.restfulwebservices.Service.UserService;
 import jakarta.validation.Valid;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
