@@ -7,24 +7,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
-import java.util.List;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity(name = "users")
-public class User {
+@Entity
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
-    String name;
-    LocalDate birthDate;
+    private String description;
 
-    @OneToMany(mappedBy = "user")
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
-    private List<Post> posts;
+    private User user;
+
+
 }
